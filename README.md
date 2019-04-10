@@ -1,5 +1,8 @@
-libri-spect
-==============================
+# libri-spect
+[![Build Status](https://travis-ci.com/MarvinT/libri-spect.svg?branch=master)](https://travis-ci.com/MarvinT/libri-spect)
+[![Coverage Status](https://coveralls.io/repos/github/MarvinT/libri-spect/badge.svg?branch=master)](https://coveralls.io/github/MarvinT/libri-spect?branch=master)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
 
 Utilities for downloading the librivox dataset and converting to spectrogram for use with keras fit_generator
 
