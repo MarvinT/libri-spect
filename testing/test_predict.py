@@ -33,7 +33,7 @@ def test_spect_predict_maker():
 
 def test_split_validation():
     path_list = list(lspct.paths.WAV_DIR.glob("*.wav"))[0:10]
-    train_path_list, val_path_list = split_validation(test_spect_predict_maker, 0.1)
+    train_path_list, val_path_list = split_validation(path_list, 0.1)
 
 
 if __name__ == "__main__":
