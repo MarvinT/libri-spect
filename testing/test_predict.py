@@ -17,7 +17,7 @@ def test_spect_predict_maker():
     hparams = lspct.features.spectrogram.HPARAMS
     test_spect_predict_maker = predict.spect_predict_maker(
         hparams, terms=TERMS, predict_terms=PREDICT_TERMS)
-    path_list = lspct.paths.WAV_DIR.glob("*.wav")[0:1]
+    path_list = list(lspct.paths.WAV_DIR.glob("*.wav"))[0:1]
     print("path_list: ", path_list)
     pred_spect = test_spect_predict_maker.batch_iter(path_list, 2)
     #neg_batch, pos_batch, labels, idxs = test_spect_predict_maker.batch_iter(path_list, 2)
@@ -32,7 +32,7 @@ def test_spect_predict_maker():
 
 
 def test_split_validation():
-    path_list = lspct.paths.WAV_DIR.glob("*.wav")[0:10]
+    path_list = list(lspct.paths.WAV_DIR.glob("*.wav"))[0:10]
     train_path_list, val_path_list = split_validation(test_spect_predict_maker, 0.1)
 
 
